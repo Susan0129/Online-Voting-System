@@ -1,0 +1,131 @@
+{% extends 'ovs/base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FAQ</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet"> 
+        <style>
+            h3{
+                color: rgb(71, 121, 168);
+                padding-left: 10px;
+                padding-top: 15px;
+            }
+            h4{
+                color: white;
+                box-shadow: 5px;
+            }
+            p{
+                color: rgb(24, 50, 68);
+            }
+            li{
+                color: white;
+            }
+            .accordion {
+	  background-color: #bcdaef;
+	  color: #444;
+	  cursor: pointer;
+	  padding: 18px;
+	  width: 100%;
+	  height: 100%;
+	  border: none;
+	  text-align: left;
+	  outline: none;
+	  font-size: 1.2em;
+	  transition: 0.4s;	
+	}
+	.faq .active, .accordion:hover {
+	  background-color: #8ba3f8;
+	}
+	.accordion:after {
+	  content: '\002B';
+	  color: #777;
+	  font-weight: bold;
+	  float: right;
+	  margin-left: 5px;
+	}
+	.faq .active:after {
+	  content: "\2212";
+	}
+	.panel {
+	  padding: 0px 20px;
+	  background-color: white;
+	  margin-top: 10px;
+	  max-height: 0;
+	  overflow: hidden;
+	  transition: max-height 0.2s ease-out;
+	}
+	.faq{
+		margin-top: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		font-family: 'Cambria', sans-serif;
+	}
+	.faq h3{
+		text-align: center;
+		margin-bottom: 30px;
+        font-family: "Brush Script MT";
+        font-size: 55px;
+	}
+        </style>
+    </head>
+    <body>
+        <div class="faq container">
+            <h3>Frequently Asked Questions</h3>
+            <button class="accordion">What makes OVS different/better than other voting systems?</button>
+            <div class="panel">
+              <p><br>OVS uses image in its unique way. Each vote is verifiable only once during a session. Once you have voted then no one can alter the your vote as well as your shares.</p>
+            </div>
+    
+            <button class="accordion">How is OVS secure ?</button>
+            <div class="panel">
+              <p><br>It provides security with the perspective of voter. Voter cannot claim to vote again or cannot check his whether his vote counted or not. Links are used to contact with voter. If secure Email is provided then it is easy for voter to keep secracy of election. </p>
+            </div>
+    
+            <button class="accordion">What type of elections can I hold with OVS ?</button>
+            <div class="panel">
+              <p><br>Elections can be organisational or institutional.</p>
+            </div>
+    
+            <button class="accordion">Can I change my vote later ?</button>
+            <div class="panel">
+              <p><br>No. A vote can be casted only ONCE</p>
+            </div>
+    
+            <button class="accordion">What is more exiciting about OVS?</button>
+            <div class="panel">
+              <p><br>It is highly responsive to develop features on demand.</p>
+            </div>
+    
+            <button class="accordion">Can OVS generate report of election for me ?</button>
+            <div class="panel">
+              <p><br>Yes. The results of an election can be viewed by clicking on "CHECH RESULTS" in user Dashboard</p>
+            </div>	
+    
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.maxHeight) {
+		      panel.style.maxHeight = null;
+		    } else {
+		      panel.style.maxHeight = panel.scrollHeight + "px";
+		    } 
+		  });
+		}
+        
+    </script>
+    </body>
+</html>
+
+{% endblock %}

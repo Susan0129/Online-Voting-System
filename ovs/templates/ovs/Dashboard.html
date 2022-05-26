@@ -1,0 +1,54 @@
+{% extends "ovs/base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<!Doctype html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    <style>
+      #welcome_msg{
+        color: rgb(106, 89, 146);
+        font-family:"Brush Script MT";
+        font-size: 50px;
+        padding-top: 15px;
+      }
+
+      h3{
+        font-family: 'Cambria';
+        color: #495fac;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container h-100">
+      <div class="msg">
+        <h2 id="welcome_msg">Welcome, {{request.user.get_full_name }}</h2><br><br>
+      </div>
+      <div class="body">
+        
+        <div class="polls">
+        <h3>Polls</h3>
+        <div id="a"><a class="btn btn-dark btn-lg" href="/position" role="button">Click to see polls</a>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="results">
+          <h3>Results</h3>
+          <div id="a"><a class="btn btn-dark btn-lg" href="/result" role="button">Click to see results</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+{% endblock %}
+
+<!--<h3><a href="/position">Click Here To Vote</a></h3>
+    <h3><a href="/result">Click Here To See Result</a></h3>-->

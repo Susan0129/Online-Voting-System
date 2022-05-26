@@ -1,0 +1,45 @@
+{% extends 'ovs/base.html' %}
+{% load static %}
+
+{% block content %}
+<html>
+    <head>
+        <style>
+            html, body {
+                height:100%;
+                padding: 0;
+                margin: 0;
+                color: white;
+            }
+
+            .container .form-row .col-lg-12{
+                padding-left: 33%;
+                padding-right: 0%;
+                padding-top: 17%;
+                padding-bottom: 0%;
+            }
+            .container .form-row .col-lg-12 #ext{
+                padding-left: 14%;
+            }
+            .container .form-row .col-lg-12 #explain{
+                padding-left: 3.8%;
+            }
+            .container .form-row .col-lg-12 #a{
+                padding-left: 20%;
+            }
+        </style>
+    </head>
+<body>
+<div class="container">
+    <div class="form-row">
+        <div class="col-lg-12">
+            <h2>Secure Online Voting System</h2>
+            <h4 id="ext">Your Voice Matters!</h4><br>
+            <p id="explain">We optimise voting process with visual cryptography.</p>
+            <div id="a"><a class="btn btn-light btn-lg" href="/user_register" role="button">Get Started !</a></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
